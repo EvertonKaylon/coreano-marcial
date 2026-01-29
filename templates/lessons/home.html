@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Início - Coreano Marcial{% endblock %}
+
+{% block content %}
+<h2>Bem-vindo ao Coreano Marcial</h2>
+<p>Aprenda coreano contextualizado para artes marciais através de uma progressão baseada em faixas.</p>
+
+<section class="belt-levels">
+    <h3>Níveis de Faixa</h3>
+    {% if belt_levels %}
+    <ul class="belt-list">
+        {% for belt in belt_levels %}
+        <li class="belt-item">
+            <a href="{% url 'lessons:belt_detail' belt.id %}">
+                <strong>{{ belt.name_portuguese }}</strong> ({{ belt.name_korean }})
+            </a>
+            {% if belt.description %}
+            <p>{{ belt.description }}</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nenhuma faixa disponível. Adicione faixas através do Django Admin.</p>
+    {% endif %}
+</section>
+{% endblock %}

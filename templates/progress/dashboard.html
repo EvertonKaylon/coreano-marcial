@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Meu Progresso - Coreano Marcial{% endblock %}
+
+{% block content %}
+<h2>Meu Progresso</h2>
+
+<section class="current-status">
+    <h3>Status Atual</h3>
+    <p><strong>Faixa Atual:</strong> {{ user_progress.current_belt.name_portuguese }} ({{ user_progress.current_belt.name_korean }})</p>
+    <p><strong>Lições Completadas:</strong> {{ user_progress.total_lessons_completed }}</p>
+    <p><strong>Vocabulário Dominado:</strong> {{ user_progress.total_vocabulary_mastered }}</p>
+    <p><strong>Acurácia Geral:</strong> {{ user_progress.overall_accuracy }}%</p>
+</section>
+
+<section class="advancement">
+    <h3>Avanço para Próxima Faixa</h3>
+    {% if next_belt %}
+    <p><strong>Próxima Faixa:</strong> {{ next_belt.name_portuguese }} ({{ next_belt.name_korean }})</p>
+    
+    <div class="criteria">
+        <h4>Critérios para Avançar:</h4>
+        <ul>
+            <li>
+                Lições completadas: {{ completed_lessons }} / {{ user_progress.current_belt.min_lessons_completed }}
+                {% if completed_lessons >= user_progress.current_belt.min_lessons_completed %}✓{% endif %}
+            </li>
+            <li>
+                Vocabulário dominado: {{ mastered_vocab }} / {{ user_progress.current_belt.min_vocabulary_mastered }}
+                {% if mastered_vocab >= user_progress.current_belt.min_vocabulary_mastered %}✓{% endif %}
+            </li>
+            <li>
+                Acurácia mínima: {{ user_progress.overall_accuracy }}% / {{ user_progress.current_belt.min_accuracy_percentage }}%
+                {% if user_progress.overall_accuracy >= user_progress.current_belt.min_accuracy_percentage %}✓{% endif %}
+            </li>
+        </ul>
+    </div>
+    
+    {% if can_advance %}
+    <form method="post" action="{% url 'progress:advance_belt' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn-advance">Avançar para {{ next_belt.name_portuguese }}</button>
+    </form>
+    {% else %}
+    <p class="warning">Você ainda não atende a todos os critérios para avançar.</p>
+    {% endif %}
+    {% else %}
+    <p>Você está na última faixa! Parabéns!</p>
+    {% endif %}
+</section>
+
+<a href="{% url 'lessons:home' %}" class="btn-back">← Voltar para Início</a>
+{% endblock %}

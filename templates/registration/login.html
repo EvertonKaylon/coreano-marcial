@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Entrar - Coreano Marcial{% endblock %}
+
+{% block content %}
+<h2>Entrar</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Entrar</button>
+</form>
+
+<p>Não tem uma conta? <a href="{% url 'users:register' %}">Registre-se aqui</a></p>
+{% endblock %}

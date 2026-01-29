@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Coreano Marcial{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1><a href="{% url 'lessons:home' %}">Coreano Marcial</a></h1>
+                {% if user.is_authenticated %}
+                <ul>
+                    <li><a href="{% url 'lessons:home' %}">Início</a></li>
+                    <li><a href="{% url 'progress:dashboard' %}">Meu Progresso</a></li>
+                    <li><a href="{% url 'logout' %}">Sair</a></li>
+                </ul>
+                {% else %}
+                <ul>
+                    <li><a href="{% url 'login' %}">Entrar</a></li>
+                    <li><a href="{% url 'users:register' %}">Registrar</a></li>
+                </ul>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div class="message {{ message.tags }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Coreano Marcial. Fase 0 - Django Base.</p>
+        </div>
+    </footer>
+</body>
+</html>

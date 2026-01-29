@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ belt_level.name_portuguese }} - Coreano Marcial{% endblock %}
+
+{% block content %}
+<h2>Faixa {{ belt_level.name_portuguese }} ({{ belt_level.name_korean }})</h2>
+
+{% if belt_level.description %}
+<p>{{ belt_level.description }}</p>
+{% endif %}
+
+<section class="lessons">
+    <h3>Lições</h3>
+    {% if belt_level.lessons.all %}
+    <ul class="lesson-list">
+        {% for lesson in belt_level.lessons.all %}
+        <li class="lesson-item">
+            <a href="{% url 'lessons:lesson_detail' lesson.id %}">
+                <strong>{{ lesson.title_portuguese }}</strong> ({{ lesson.title_korean }})
+            </a>
+            {% if lesson.description %}
+            <p>{{ lesson.description }}</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nenhuma lição disponível para esta faixa.</p>
+    {% endif %}
+</section>
+
+<a href="{% url 'lessons:home' %}" class="btn-back">← Voltar para Início</a>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ lesson.title_portuguese }} - Coreano Marcial{% endblock %}
+
+{% block content %}
+<h2>{{ lesson.title_portuguese }}</h2>
+<h3>{{ lesson.title_korean }}</h3>
+
+{% if lesson.description %}
+<p>{{ lesson.description }}</p>
+{% endif %}
+
+<section class="vocabulary">
+    <h3>Vocabulário</h3>
+    {% if lesson.vocabulary_items.all %}
+    <ul class="vocabulary-list">
+        {% for vocab in lesson.vocabulary_items.all %}
+        <li class="vocabulary-item">
+            <div class="vocab-korean">{{ vocab.korean_text }}</div>
+            <div class="vocab-portuguese">{{ vocab.portuguese_translation }}</div>
+            {% if vocab.context %}
+            <div class="vocab-context">Contexto: {{ vocab.context }}</div>
+            {% endif %}
+            {% if vocab.example_sentence_korean %}
+            <div class="vocab-example">
+                <strong>Exemplo:</strong>
+                <div>{{ vocab.example_sentence_korean }}</div>
+                <div>{{ vocab.example_sentence_portuguese }}</div>
+            </div>
+            {% endif %}
+            
+            {% if vocab.audio_files.all %}
+            <div class="audio-player">
+                {% for audio in vocab.audio_files.all %}
+                <audio controls>
+                    <source src="{% url 'audio:serve_audio' audio.id %}" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nenhum vocabulário disponível para esta lição.</p>
+    {% endif %}
+</section>
+
+<section class="lesson-audio">
+    <h3>Áudio da Lição</h3>
+    {% if lesson.audio_files.all %}
+    {% for audio in lesson.audio_files.all %}
+    <div class="audio-player">
+        <audio controls>
+            <source src="{% url 'audio:serve_audio' audio.id %}" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        {% if audio.description %}
+        <p>{{ audio.description }}</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>Nenhum áudio disponível para esta lição.</p>
+    {% endif %}
+</section>
+
+<a href="{% url 'lessons:belt_detail' lesson.belt_level.id %}" class="btn-back">← Voltar para Faixa {{ lesson.belt_level.name_portuguese }}</a>
+{% endblock %}
