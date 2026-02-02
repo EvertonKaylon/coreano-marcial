@@ -111,6 +111,25 @@ coreano-marcial/
 - **Fase 2**: Service Worker + PWA offline mode
 - **Fase 3**: Pronunciation Assessment API integration
 
+## Pull Request & Governance
+
+Antes de abrir PRs que alterem `docs/PRD.md` ou specs, siga este processo:
+
+1. Preencha a seção `Constitution Compliance` no seu spec (ou no corpo do PR) indicando a(s) seção(ões) do `docs/PRD.md` relacionadas.
+2. Inclua um `Sync Impact Report` no corpo do PR (veja `.github/PULL_REQUEST_TEMPLATE.md`).
+3. Nomeie um `Designated Reviewer` (pedagogia/conteúdo ou segurança, conforme o caso).
+4. Para alterações que impactam segurança/privacidade, atualize `docs/threats_v_0.md` e solicite revisão de segurança antes do merge.
+5. Obtenha aprovações: 1 Maintainer + 1 Designated Reviewer (ou follow-up independente para MAJOR changes).
+
+Comandos úteis para criar a PR localmente (substitua `<remote-url>` se necessário):
+
+```bash
+git remote add origin <remote-url>
+git push -u origin 001-add-prd
+# com GitHub CLI:
+gh pr create --base main --head 001-add-prd --title "docs: add PRD + governance" --body-file .github/PULL_REQUEST_TEMPLATE.md
+```
+
 ## Segurança
 
 - SECRET_KEY em variável de ambiente

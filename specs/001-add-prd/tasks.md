@@ -6,7 +6,7 @@ description: "Tasks for creating and ratifying the canonical PRD"
 
 **Input**: `specs/001-add-prd/spec.md`, `specs/001-add-prd/plan.md`, `specs/001-add-prd/research.md`
 **Prerequisites**: plan.md (required), spec.md (required), research.md
-**Constitution Gate**: All prerequisites MUST have a passing `Constitution Check`.
+**Constitution Compliance Gate**: All prerequisites MUST have a passing `Constitution Compliance`.
 
 ## Phase 1: Setup & Drafting
 
@@ -24,8 +24,9 @@ description: "Tasks for creating and ratifying the canonical PRD"
 
 ## Phase 3: CI & Automation
 
-- [ ] T007 [P] Add CI checks (if missing) to validate: tests passing, `ruff` linting, `black` formatting, and presence of `Constitution Compliance` in new specs/PRs.
-- [ ] T008 [P] Create a small PR template that requires `Constitution Compliance` and `Sync Impact Report` sections.
+
+- [ ] T007 [P] DEPRECATED — consolidated into T012/T013: CI checks + PR template enforcement. (Do not implement separately.)
+- [ ] T008 [P] DEPRECATED — see T013 for PR template implementation.
 
 - [ ] T012 [P] Implement CI job `prd-guards` to verify `docs/PRD.md` contains ratification metadata (`Version`, `Ratified`) and to run basic checks for `Constitution Compliance` in changed specs.
 - [ ] T013 [P] Add `PULL_REQUEST_TEMPLATE.md` in `.github/` that includes `Constitution Compliance` and `Sync Impact Report` sections and instructs contributor to name the Designated Reviewer.
@@ -36,5 +37,5 @@ description: "Tasks for creating and ratifying the canonical PRD"
 - [ ] T010 Update `.specify/memory/constitution.md` if governance changes are ratified as part of PRD changes.
 
 ## Notes
-- All tasks require passing the Constitution Check before implementation.
+All tasks require passing the Constitution Compliance before implementation.
 - The project currently has a single maintainer; see acceptance criteria in `specs/001-add-prd/spec.md` for governance details.

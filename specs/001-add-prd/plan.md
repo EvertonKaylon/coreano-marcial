@@ -1,6 +1,6 @@
-# Implementation Plan: [FEATURE]
+# Implementation Plan: Project PRD (001-add-prd)
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
+**Branch**: `001-add-prd` | **Date**: 2026-02-02 | **Spec**: `specs/001-add-prd/spec.md`
 **Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
@@ -21,11 +21,11 @@ Create the canonical product PRD (`docs/PRD.md`) documenting the project's purpo
 **Constraints**: Minimize memory/CPU footprint; avoid heavy synchronous processing during requests; favor DB query optimizations (`select_related` / `prefetch_related`) and paginated endpoints for large lists.  
 **Scale/Scope**: Baseline: small user base (0–10k users). Design choices should not preclude reasonable scaling to tens of thousands but must not add premature complexity.
 
-## Constitution Check
+## Constitution Compliance
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-Constitution compliance is a hard gate. Every plan MUST include a short `Constitution Check` subsection that demonstrates the feature satisfies the following items from the project constitution (`.specify/memory/constitution.md`):
+Constitution Compliance is a hard gate. Every plan MUST include a short `Constitution Compliance` subsection that demonstrates the feature satisfies the following items from the project constitution (`.specify/memory/constitution.md`):
 
 - Domain alignment: The feature references the specific section(s) in `docs/PRD.md` that justify its existence (Domain Supremacy).
 - Spec-driven: A linked spec exists (`specs/[feature]/spec.md` or `docs/SPEC.md`) with acceptance criteria and derived tasks (Mandatory Spec-Driven Development).
@@ -37,16 +37,16 @@ Constitution compliance is a hard gate. Every plan MUST include a short `Constit
 
 If any item cannot be satisfied, the plan MUST include a justification and an explicit mitigation or acceptance of increased review (e.g., new decision file in `docs/decisions_v_X.md`).
 
-A clear `Constitution Check` in the plan is required before Phase 0 research can proceed.
+A clear `Constitution Compliance` entry in the plan is required before Phase 0 research can proceed.
 
-### Constitution Check — Result: PASS
+### Constitution Compliance — Result: PASS
 
-- **Domain alignment**: This feature creates or normalizes `docs/PRD.md` and maps directly to the project's purpose and scope; the spec (`specs/001-add-prd/spec.md`) includes explicit PRD mapping. (Domain Supremacy)  
-- **Spec-driven**: A spec exists with acceptance criteria and derived tasks (`specs/001-add-prd/tasks.md`); checklists validate the spec quality. (Mandatory Spec-Driven Development)  
-- **Security**: Documentation-only change; no code or data exposure is introduced. Any follow-up functional changes triggered by PRD content will require a threat assessment referencing `docs/threats_v_0.md`. (Security by Default)  
-- **Architecture**: Documentation change only — no template/view/model changes. No boundary violations expected. (Explicit Architecture Boundaries)  
-- **Performance**: None expected for documentation update. Any follow-up features will document performance impacts in their plans. (Performance as Constraint)  
-- **Visual changes**: None planned. If UI changes are later required, `design_tokens.json` will be updated and CSS regenerated accordingly. (Design Token Authority)  
+- **Domain alignment**: This feature creates or normalizes `docs/PRD.md` and maps directly to the project's purpose and scope; the spec (`specs/001-add-prd/spec.md`) includes explicit PRD mapping. (Domain Supremacy)
+- **Spec-driven**: A spec exists with acceptance criteria and derived tasks (`specs/001-add-prd/tasks.md`); checklists validate the spec quality. (Mandatory Spec-Driven Development)
+- **Security**: Documentation-only change; no code or data exposure is introduced. Any follow-up functional changes triggered by PRD content will require a threat assessment referencing `docs/threats_v_0.md`. (Security by Default)
+- **Architecture**: Documentation change only — no template/view/model changes. No boundary violations expected. (Explicit Architecture Boundaries)
+- **Performance**: None expected for documentation update. Any follow-up features will document performance impacts in their plans. (Performance as Constraint)
+- **Visual changes**: None planned. If UI changes are later required, `design_tokens.json` will be updated and CSS regenerated accordingly. (Design Token Authority)
 - **Documentation**: Primary doc updated is `docs/PRD.md`. The plan includes tasks to create a Sync Impact Report and PR template to ensure documentation synchronization. (Documentation Synchronization Rule)
 
 **Post-design Re-check**: All required artifacts for Phase 1 were produced (`research.md`, `data-model.md`, `quickstart.md`, `contracts/README.md`, `tasks.md`). No Constitution items are blocked for Phase 1.
@@ -67,7 +67,7 @@ specs/[###-feature]/
 
 ### Source Code (repository root)
 <!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
+  NOTE: Replace the placeholder tree below with the concrete layout before Phase 1 deliverables.
   for this feature. Delete unused options and expand the chosen structure with
   real paths (e.g., apps/admin, packages/something). The delivered plan must
   not include Option labels.
