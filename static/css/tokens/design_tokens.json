@@ -1,0 +1,964 @@
+{
+  "meta": {
+    "name": "Neon Dojo - Cyberspace Warrior System",
+    "version": "1.0.0",
+    "theme": "cyberpunk-neon",
+    "description": "A cyberpunk-inspired design system with neon accents and dark atmospheric backgrounds"
+  },
+  "colors": {
+    "primary": {
+      "hex": "#24F5FF",
+      "rgb": "rgb(36, 245, 255)",
+      "hsl": "hsl(183, 100%, 57%)",
+      "name": "neon-cyan",
+      "usage": "Primary actions, highlights, borders"
+    },
+    "secondary": {
+      "hex": "#FF2A5F",
+      "rgb": "rgb(255, 42, 95)",
+      "hsl": "hsl(345, 100%, 58%)",
+      "name": "neon-crimson",
+      "usage": "Secondary actions, alerts, emphasis"
+    },
+    "accent": {
+      "hex": "#141720",
+      "rgb": "rgb(20, 23, 32)",
+      "hsl": "hsl(225, 23%, 10%)",
+      "name": "core-ink",
+      "usage": "Accent elements, alternative surfaces"
+    },
+    "success": {
+      "hex": "#24F5FF",
+      "rgb": "rgb(36, 245, 255)",
+      "hsl": "hsl(183, 100%, 57%)",
+      "name": "neon-cyan",
+      "usage": "Success states, confirmations"
+    },
+    "warning": {
+      "hex": "#FFB800",
+      "rgb": "rgb(255, 184, 0)",
+      "hsl": "hsl(43, 100%, 50%)",
+      "name": "neon-amber",
+      "usage": "Warning states, caution indicators"
+    },
+    "danger": {
+      "hex": "#FF2A5F",
+      "rgb": "rgb(255, 42, 95)",
+      "hsl": "hsl(345, 100%, 58%)",
+      "name": "neon-crimson",
+      "usage": "Error states, destructive actions"
+    },
+    "background": {
+      "primary": {
+        "hex": "#0B0D10",
+        "rgb": "rgb(11, 13, 16)",
+        "hsl": "hsl(216, 19%, 5%)",
+        "name": "core-black",
+        "usage": "Main background, base layer"
+      },
+      "secondary": {
+        "hex": "#141720",
+        "rgb": "rgb(20, 23, 32)",
+        "hsl": "hsl(225, 23%, 10%)",
+        "name": "core-ink",
+        "usage": "Elevated surfaces, panels"
+      },
+      "tertiary": {
+        "hex": "#1A1F2E",
+        "rgb": "rgb(26, 31, 46)",
+        "hsl": "hsl(225, 28%, 14%)",
+        "name": "deep-slate",
+        "usage": "Nested panels, cards"
+      }
+    },
+    "surface": {
+      "default": {
+        "hex": "#141720",
+        "rgb": "rgb(20, 23, 32)",
+        "hsl": "hsl(225, 23%, 10%)",
+        "opacity": 0.8,
+        "usage": "Glass-morphic surfaces, panels"
+      },
+      "elevated": {
+        "hex": "#1A1F2E",
+        "rgb": "rgb(26, 31, 46)",
+        "hsl": "hsl(225, 28%, 14%)",
+        "opacity": 0.9,
+        "usage": "Elevated cards, modals"
+      },
+      "interactive": {
+        "hex": "#1F2535",
+        "rgb": "rgb(31, 37, 53)",
+        "hsl": "hsl(224, 26%, 16%)",
+        "opacity": 0.85,
+        "usage": "Interactive elements background"
+      }
+    },
+    "muted": {
+      "hex": "#2A3142",
+      "rgb": "rgb(42, 49, 66)",
+      "hsl": "hsl(223, 22%, 21%)",
+      "usage": "Disabled states, subtle backgrounds"
+    },
+    "border": {
+      "primary": {
+        "hex": "#24F5FF",
+        "rgb": "rgb(36, 245, 255)",
+        "hsl": "hsl(183, 100%, 57%)",
+        "opacity": 1,
+        "usage": "Primary borders, neon outlines"
+      },
+      "secondary": {
+        "hex": "#FF2A5F",
+        "rgb": "rgb(255, 42, 95)",
+        "hsl": "hsl(345, 100%, 58%)",
+        "opacity": 1,
+        "usage": "Secondary borders, emphasis"
+      },
+      "subtle": {
+        "hex": "#24F5FF",
+        "rgb": "rgb(36, 245, 255)",
+        "hsl": "hsl(183, 100%, 57%)",
+        "opacity": 0.3,
+        "usage": "Subtle dividers, separators"
+      },
+      "muted": {
+        "hex": "#2A3142",
+        "rgb": "rgb(42, 49, 66)",
+        "hsl": "hsl(223, 22%, 21%)",
+        "opacity": 0.5,
+        "usage": "Inactive borders"
+      }
+    },
+    "text": {
+      "primary": {
+        "hex": "#FFFFFF",
+        "rgb": "rgb(255, 255, 255)",
+        "hsl": "hsl(0, 0%, 100%)",
+        "usage": "Primary text, headings"
+      },
+      "secondary": {
+        "hex": "#24F5FF",
+        "rgb": "rgb(36, 245, 255)",
+        "hsl": "hsl(183, 100%, 57%)",
+        "usage": "Links, interactive text, labels"
+      },
+      "muted": {
+        "hex": "#8A93A8",
+        "rgb": "rgb(138, 147, 168)",
+        "hsl": "hsl(222, 14%, 60%)",
+        "usage": "Disabled text, subtle labels"
+      },
+      "inverse": {
+        "hex": "#0B0D10",
+        "rgb": "rgb(11, 13, 16)",
+        "hsl": "hsl(216, 19%, 5%)",
+        "usage": "Text on light backgrounds"
+      }
+    },
+    "glow": {
+      "cyan": {
+        "hex": "#24F5FF",
+        "rgb": "rgb(36, 245, 255)",
+        "hsl": "hsl(183, 100%, 57%)",
+        "blur": "20px",
+        "spread": "8px",
+        "usage": "Primary glow effects"
+      },
+      "crimson": {
+        "hex": "#FF2A5F",
+        "rgb": "rgb(255, 42, 95)",
+        "hsl": "hsl(345, 100%, 58%)",
+        "blur": "20px",
+        "spread": "8px",
+        "usage": "Secondary glow effects"
+      },
+      "soft": {
+        "hex": "#24F5FF",
+        "rgb": "rgb(36, 245, 255)",
+        "hsl": "hsl(183, 100%, 57%)",
+        "blur": "40px",
+        "spread": "4px",
+        "opacity": 0.4,
+        "usage": "Ambient lighting, soft halos"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": {
+        "name": "IBM Plex Sans",
+        "fallback": "-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif",
+        "usage": "Body text, UI elements"
+      },
+      "display": {
+        "name": "Pretendard",
+        "fallback": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+        "usage": "Headings, display text, titles"
+      },
+      "mono": {
+        "name": "IBM Plex Mono",
+        "fallback": "'Courier New', Courier, monospace",
+        "usage": "Code, technical labels, data"
+      },
+      "decorative": {
+        "name": "Pretenon",
+        "fallback": "serif",
+        "usage": "Decorative elements, special headings"
+      },
+      "alternative": {
+        "name": "Inter/SUIT",
+        "fallback": "system-ui, sans-serif",
+        "usage": "Alternative UI text, Korean/multilingual"
+      }
+    },
+    "fontSize": {
+      "xs": {
+        "value": "0.75rem",
+        "px": "12px",
+        "usage": "Small labels, captions"
+      },
+      "sm": {
+        "value": "0.875rem",
+        "px": "14px",
+        "usage": "Secondary text, helper text"
+      },
+      "base": {
+        "value": "1rem",
+        "px": "16px",
+        "usage": "Body text, default"
+      },
+      "lg": {
+        "value": "1.125rem",
+        "px": "18px",
+        "usage": "Large body text, subtitles"
+      },
+      "xl": {
+        "value": "1.25rem",
+        "px": "20px",
+        "usage": "Small headings, section titles"
+      },
+      "2xl": {
+        "value": "1.5rem",
+        "px": "24px",
+        "usage": "Medium headings"
+      },
+      "3xl": {
+        "value": "1.875rem",
+        "px": "30px",
+        "usage": "Large headings"
+      },
+      "4xl": {
+        "value": "2.25rem",
+        "px": "36px",
+        "usage": "Hero headings, page titles"
+      },
+      "5xl": {
+        "value": "3rem",
+        "px": "48px",
+        "usage": "Display headings"
+      }
+    },
+    "fontWeight": {
+      "normal": {
+        "value": 400,
+        "usage": "Regular body text"
+      },
+      "medium": {
+        "value": 500,
+        "usage": "Meight (emphasized text)"
+      },
+      "semibold": {
+        "value": 600,
+        "usage": "Swenty (semi-bold emphasis)"
+      },
+      "bold": {
+        "value": 700,
+        "usage": "Retindard/Weight (strong emphasis)"
+      },
+      "weight": {
+        "value": 700,
+        "usage": "Weight designation (headings, labels)"
+      },
+      "pretendard": {
+        "value": 600,
+        "usage": "Primary display weight"
+      }
+    },
+    "lineHeight": {
+      "tight": {
+        "value": 1.2,
+        "usage": "Headings, titles"
+      },
+      "normal": {
+        "value": 1.5,
+        "usage": "Body text, default"
+      },
+      "relaxed": {
+        "value": 1.75,
+        "usage": "Large text blocks, reading comfort"
+      },
+      "loose": {
+        "value": 2,
+        "usage": "Spaced content, breathing room"
+      }
+    },
+    "letterSpacing": {
+      "tighter": {
+        "value": "-0.05em",
+        "usage": "Display headings"
+      },
+      "tight": {
+        "value": "-0.025em",
+        "usage": "Large headings"
+      },
+      "normal": {
+        "value": "0",
+        "usage": "Body text, default"
+      },
+      "wide": {
+        "value": "0.025em",
+        "usage": "All-caps text, labels"
+      },
+      "wider": {
+        "value": "0.05em",
+        "usage": "Spaced labels, technical text"
+      },
+      "widest": {
+        "value": "0.1em",
+        "usage": "Decorative spacing"
+      }
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "scale": {
+      "0": {
+        "value": "0",
+        "px": "0px"
+      },
+      "1": {
+        "value": "0.25rem",
+        "px": "4px"
+      },
+      "2": {
+        "value": "0.5rem",
+        "px": "8px"
+      },
+      "3": {
+        "value": "0.75rem",
+        "px": "12px"
+      },
+      "4": {
+        "value": "1rem",
+        "px": "16px"
+      },
+      "5": {
+        "value": "1.25rem",
+        "px": "20px"
+      },
+      "6": {
+        "value": "1.5rem",
+        "px": "24px"
+      },
+      "8": {
+        "value": "2rem",
+        "px": "32px"
+      },
+      "10": {
+        "value": "2.5rem",
+        "px": "40px"
+      },
+      "12": {
+        "value": "3rem",
+        "px": "48px"
+      },
+      "16": {
+        "value": "4rem",
+        "px": "64px"
+      },
+      "20": {
+        "value": "5rem",
+        "px": "80px"
+      },
+      "24": {
+        "value": "6rem",
+        "px": "96px"
+      },
+      "32": {
+        "value": "8rem",
+        "px": "128px"
+      }
+    },
+    "containerWidths": {
+      "sm": {
+        "value": "640px",
+        "usage": "Small containers, cards"
+      },
+      "md": {
+        "value": "768px",
+        "usage": "Medium containers, forms"
+      },
+      "lg": {
+        "value": "1024px",
+        "usage": "Large containers, content"
+      },
+      "xl": {
+        "value": "1280px",
+        "usage": "Extra large containers, main layout"
+      },
+      "2xl": {
+        "value": "1536px",
+        "usage": "Maximum content width"
+      },
+      "panel": {
+        "value": "420px",
+        "usage": "Side panels, component showcases"
+      }
+    },
+    "grid": {
+      "columns": 12,
+      "gap": {
+        "value": "1.5rem",
+        "px": "24px"
+      },
+      "gutter": {
+        "value": "1rem",
+        "px": "16px"
+      }
+    }
+  },
+  "borderRadius": {
+    "none": {
+      "value": "0",
+      "usage": "Sharp corners"
+    },
+    "small": {
+      "value": "0.25rem",
+      "px": "4px",
+      "usage": "Subtle rounding, small elements"
+    },
+    "medium": {
+      "value": "0.5rem",
+      "px": "8px",
+      "usage": "Standard rounding, buttons, inputs"
+    },
+    "large": {
+      "value": "0.75rem",
+      "px": "12px",
+      "usage": "Cards, panels, larger elements"
+    },
+    "xl": {
+      "value": "1rem",
+      "px": "16px",
+      "usage": "Large cards, modals"
+    },
+    "2xl": {
+      "value": "1.5rem",
+      "px": "24px",
+      "usage": "Decorative elements"
+    },
+    "full": {
+      "value": "9999px",
+      "usage": "Pills, circular elements"
+    },
+    "decorative": {
+      "value": "0.5rem",
+      "px": "8px",
+      "usage": "Ornamental borders with neon effect"
+    }
+  },
+  "shadows": {
+    "small": {
+      "value": "0 1px 2px 0 rgba(0, 0, 0, 0.3)",
+      "usage": "Subtle elevation"
+    },
+    "medium": {
+      "value": "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3)",
+      "usage": "Standard elevation, cards"
+    },
+    "large": {
+      "value": "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4)",
+      "usage": "High elevation, modals"
+    },
+    "xl": {
+      "value": "0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4)",
+      "usage": "Maximum elevation"
+    },
+    "neonGlow": {
+      "cyan": {
+        "value": "0 0 20px rgba(36, 245, 255, 0.6), 0 0 40px rgba(36, 245, 255, 0.4)",
+        "usage": "Primary neon glow effect"
+      },
+      "crimson": {
+        "value": "0 0 20px rgba(255, 42, 95, 0.6), 0 0 40px rgba(255, 42, 95, 0.4)",
+        "usage": "Secondary neon glow effect"
+      },
+      "soft": {
+        "value": "0 0 40px rgba(36, 245, 255, 0.3)",
+        "usage": "Subtle ambient glow"
+      },
+      "intense": {
+        "value": "0 0 10px rgba(36, 245, 255, 0.8), 0 0 20px rgba(36, 245, 255, 0.6), 0 0 40px rgba(36, 245, 255, 0.4)",
+        "usage": "Intense neon glow, active states"
+      }
+    },
+    "focusRing": {
+      "value": "0 0 0 3px rgba(36, 245, 255, 0.5)",
+      "usage": "Focus indicators, accessibility"
+    },
+    "inner": {
+      "value": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.4)",
+      "usage": "Inset elements, pressed states"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "description": "Neon-bordered button with cyan outline and glow",
+        "background": "Transparent or subtle dark (#141720 with 60% opacity)",
+        "border": "2px solid #24F5FF with neon glow",
+        "text": "#FFFFFF or #24F5FF",
+        "padding": "12px 24px (vertical: 3, horizontal: 6)",
+        "borderRadius": "8px (medium)",
+        "fontSize": "1rem (base)",
+        "fontWeight": "600 (Pretendard)",
+        "textTransform": "none or uppercase for labels",
+        "hover": "Intensified cyan glow, slight background lighten to #1A1F2E",
+        "active": "Inner shadow, reduced glow",
+        "disabled": "Border opacity 30%, text muted (#8A93A8)"
+      },
+      "secondary": {
+        "description": "Crimson accent button for secondary actions",
+        "background": "Transparent or subtle dark (#141720 with 60% opacity)",
+        "border": "2px solid #FF2A5F with neon glow",
+        "text": "#FFFFFF or #FF2A5F",
+        "padding": "12px 24px",
+        "borderRadius": "8px (medium)",
+        "hover": "Intensified crimson glow",
+        "active": "Inner shadow",
+        "disabled": "Border opacity 30%"
+      },
+      "strike": {
+        "description": "Action button with emphasis (shown in components panel)",
+        "background": "#FF2A5F with glow or gradient overlay",
+        "border": "2px solid #FF2A5F with intense glow",
+        "text": "#FFFFFF",
+        "padding": "10px 20px",
+        "borderRadius": "6px",
+        "fontWeight": "700 (Weight)",
+        "hover": "Background brighten, glow expansion",
+        "active": "Scale down slightly (transform: scale(0.98))"
+      },
+      "ghost": {
+        "description": "Minimal button with no border, text-only",
+        "background": "Transparent",
+        "border": "none",
+        "text": "#24F5FF",
+        "padding": "8px 16px",
+        "hover": "Subtle cyan glow on text, background #1A1F2E with 40% opacity",
+        "active": "Text color brighten"
+      }
+    },
+    "forms": {
+      "inputs": {
+        "description": "Dark input fields with neon borders",
+        "background": "#141720 with 80% opacity",
+        "border": "1px solid #24F5FF with 30% opacity (subtle), 1px solid #24F5FF on focus",
+        "text": "#FFFFFF",
+        "placeholder": "#8A93A8",
+        "padding": "12px 16px",
+        "borderRadius": "8px (medium)",
+        "fontSize": "1rem (base)",
+        "focus": "Border becomes solid #24F5FF, subtle cyan glow (focus ring)",
+        "error": "Border #FF2A5F, crimson glow",
+        "disabled": "Background #2A3142 with 50% opacity, text #8A93A8"
+      },
+      "labels": {
+        "description": "Cyan colored labels above inputs",
+        "text": "#24F5FF or #FFFFFF",
+        "fontSize": "0.875rem (sm)",
+        "fontWeight": "500 (medium)",
+        "marginBottom": "8px (spacing-2)",
+        "textTransform": "none or uppercase for emphasis"
+      },
+      "helperText": {
+        "description": "Subtle helper text below inputs",
+        "text": "#8A93A8",
+        "fontSize": "0.75rem (xs)",
+        "marginTop": "4px (spacing-1)"
+      },
+      "errorText": {
+        "description": "Error messages in crimson",
+        "text": "#FF2A5F",
+        "fontSize": "0.75rem (xs)",
+        "fontWeight": "500 (medium)",
+        "marginTop": "4px (spacing-1)"
+      }
+    },
+    "cards": {
+      "default": {
+        "description": "Glass-morphic panels with neon decorative borders",
+        "background": "#141720 with 80-90% opacity, subtle backdrop blur",
+        "border": "2px solid #24F5FF with decorative ornamental corners/edges",
+        "borderRadius": "12px (large)",
+        "padding": "24px (spacing-6)",
+        "boxShadow": "Medium shadow + subtle cyan glow",
+        "decorativeElements": "Ornamental flourishes in cyan and crimson at corners",
+        "hover": "Glow intensifies, slight elevation increase",
+        "nested": "Background #1A1F2E (tertiary) for nested cards"
+      },
+      "panel": {
+        "description": "Larger display panels (like typography and component showcases)",
+        "background": "#141720 with 85% opacity",
+        "border": "2px solid #24F5FF with elaborate decorative borders",
+        "borderRadius": "12px (large)",
+        "padding": "32px (spacing-8)",
+        "minHeight": "300px or content-based",
+        "decorativeAccents": "Floral/organic neon patterns at borders",
+        "title": "#FFFFFF, font-size 1.5rem (2xl), font-weight 600 (Pretendard)"
+      }
+    },
+    "alerts": {
+      "info": {
+        "description": "Informational alerts with cyan accent",
+        "background": "#141720 with 90% opacity",
+        "border": "1px solid #24F5FF on left edge (4px thick accent)",
+        "text": "#FFFFFF",
+        "icon": "#24F5FF",
+        "padding": "16px (spacing-4)",
+        "borderRadius": "8px (medium)"
+      },
+      "warning": {
+        "description": "Warning alerts with amber accent",
+        "background": "#141720 with 90% opacity",
+        "border": "1px solid #FFB800 on left edge (4px thick accent)",
+        "text": "#FFFFFF",
+        "icon": "#FFB800",
+        "padding": "16px (spacing-4)",
+        "borderRadius": "8px (medium)"
+      },
+      "error": {
+        "description": "Error alerts with crimson accent",
+        "background": "#141720 with 90% opacity",
+        "border": "1px solid #FF2A5F on left edge (4px thick accent)",
+        "text": "#FFFFFF",
+        "icon": "#FF2A5F",
+        "padding": "16px (spacing-4)",
+        "borderRadius": "8px (medium)"
+      },
+      "success": {
+        "description": "Success alerts with cyan accent",
+        "background": "#141720 with 90% opacity",
+        "border": "1px solid #24F5FF on left edge (4px thick accent)",
+        "text": "#FFFFFF",
+        "icon": "#24F5FF",
+        "padding": "16px (spacing-4)",
+        "borderRadius": "8px (medium)"
+      }
+    },
+    "navigation": {
+      "header": {
+        "description": "Top navigation bar with cyberpunk aesthetic",
+        "background": "#0B0D10 with 95% opacity, backdrop blur",
+        "border": "1px solid #24F5FF with 20% opacity at bottom",
+        "height": "64px",
+        "padding": "0 32px (horizontal spacing-8)",
+        "boxShadow": "Subtle cyan glow at bottom edge",
+        "logo": "#24F5FF and #FF2A5F accents"
+      },
+      "navItems": {
+        "description": "Navigation links and items",
+        "text": "#FFFFFF or #8A93A8 (inactive)",
+        "fontSize": "1rem (base)",
+        "fontWeight": "500 (medium)",
+        "padding": "8px 16px",
+        "hover": "Text color #24F5FF, subtle glow",
+        "active": "Text color #24F5FF, bottom border 2px solid #24F5FF",
+        "spacing": "24px between items"
+      },
+      "sidebar": {
+        "description": "Side navigation panel",
+        "background": "#141720 with 85% opacity",
+        "border": "1px solid #24F5FF with 30% opacity on right edge",
+        "width": "280px",
+        "padding": "24px (spacing-6)"
+      }
+    },
+    "tables": {
+      "container": {
+        "description": "Data tables with neon accents",
+        "background": "#141720 with 80% opacity",
+        "border": "1px solid #24F5FF with 30% opacity",
+        "borderRadius": "12px (large)",
+        "overflow": "hidden"
+      },
+      "header": {
+        "description": "Table header row",
+        "background": "#1A1F2E with 90% opacity",
+        "text": "#24F5FF",
+        "fontSize": "0.875rem (sm)",
+        "fontWeight": "600 (Pretendard)",
+        "textTransform": "uppercase",
+        "padding": "12px 16px",
+        "borderBottom": "2px solid #24F5FF with 50% opacity"
+      },
+      "row": {
+        "description": "Table data rows",
+        "background": "Transparent",
+        "text": "#FFFFFF",
+        "fontSize": "1rem (base)",
+        "padding": "12px 16px",
+        "borderBottom": "1px solid #24F5FF with 10% opacity",
+        "hover": "Background #1A1F2E with 60% opacity, subtle cyan glow"
+      },
+      "cell": {
+        "padding": "12px 16px",
+        "verticalAlign": "middle"
+      },
+      "alternateRows": {
+        "description": "Optional zebra striping",
+        "background": "#1A1F2E with 30% opacity for even rows"
+      }
+    },
+    "emptyStates": {
+      "description": "Empty state displays with cyberpunk character illustration",
+      "container": {
+        "background": "#141720 with 70% opacity",
+        "border": "2px solid #24F5FF with 20% opacity, dashed or decorative",
+        "borderRadius": "12px (large)",
+        "padding": "64px 32px (vertical spacing-16, horizontal spacing-8)",
+        "textAlign": "center"
+      },
+      "illustration": {
+        "description": "Neon warrior character or icon in cyan and crimson",
+        "size": "200-300px",
+        "colors": "#24F5FF and #FF2A5F with glow effects"
+      },
+      "title": {
+        "text": "#FFFFFF",
+        "fontSize": "1.5rem (2xl)",
+        "fontWeight": "600 (Pretendard)",
+        "marginTop": "24px (spacing-6)"
+      },
+      "description": {
+        "text": "#8A93A8",
+        "fontSize": "1rem (base)",
+        "marginTop": "12px (spacing-3)",
+        "maxWidth": "400px"
+      },
+      "action": {
+        "description": "Primary button to resolve empty state",
+        "marginTop": "24px (spacing-6)"
+      }
+    },
+    "badges": {
+      "description": "Small labels and tags",
+      "background": "#24F5FF with 20% opacity",
+      "border": "1px solid #24F5FF",
+      "text": "#24F5FF or #FFFFFF",
+      "fontSize": "0.75rem (xs)",
+      "fontWeight": "600 (Pretendard)",
+      "padding": "4px 8px (vertical spacing-1, horizontal spacing-2)",
+      "borderRadius": "4px (small) or full for pills",
+      "variants": {
+        "crimson": "Background #FF2A5F with 20% opacity, border #FF2A5F, text #FF2A5F",
+        "muted": "Background #2A3142 with 40% opacity, border #2A3142, text #8A93A8"
+      }
+    },
+    "dividers": {
+      "description": "Horizontal and vertical separators",
+      "horizontal": {
+        "border": "1px solid #24F5FF with 20% opacity",
+        "margin": "24px 0 (vertical spacing-6)"
+      },
+      "vertical": {
+        "border": "1px solid #24F5FF with 20% opacity",
+        "height": "100%",
+        "margin": "0 16px (horizontal spacing-4)"
+      },
+      "decorative": {
+        "description": "Ornamental dividers with flourishes",
+        "border": "1px solid #24F5FF",
+        "decorativeElements": "Floral or geometric neon patterns at center"
+      }
+    }
+  },
+  "motion": {
+    "duration": {
+      "instant": {
+        "value": "100ms",
+        "usage": "Micro-interactions, instant feedback"
+      },
+      "fast": {
+        "value": "200ms",
+        "usage": "Quick transitions, tooltips"
+      },
+      "normal": {
+        "value": "300ms",
+        "usage": "Standard transitions, hover states"
+      },
+      "slow": {
+        "value": "500ms",
+        "usage": "Complex animations, page transitions"
+      },
+      "slower": {
+        "value": "700ms",
+        "usage": "Elaborate animations, modal appearances"
+      }
+    },
+    "easing": {
+      "linear": {
+        "value": "linear",
+        "usage": "Constant speed, loading indicators"
+      },
+      "easeIn": {
+        "value": "cubic-bezier(0.4, 0, 1, 1)",
+        "usage": "Accelerating, elements exiting"
+      },
+      "easeOut": {
+        "value": "cubic-bezier(0, 0, 0.2, 1)",
+        "usage": "Decelerating, elements entering"
+      },
+      "easeInOut": {
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "usage": "Smooth transitions, general use"
+      },
+      "cyberpunk": {
+        "value": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+        "usage": "Bouncy, energetic animations for neon effects"
+      }
+    },
+    "hover": {
+      "default": {
+        "description": "Standard hover behavior",
+        "transition": "all 300ms ease-out",
+        "effects": "Glow intensification, slight scale increase (1.02-1.05), color brightening"
+      },
+      "neonGlow": {
+        "description": "Neon glow expansion on hover",
+        "transition": "box-shadow 300ms ease-out, border-color 200ms ease-out",
+        "effects": "Shadow blur increases, shadow spread expands, border opacity increases to 100%"
+      },
+      "lift": {
+        "description": "Elevation increase on hover",
+        "transition": "transform 200ms ease-out, box-shadow 300ms ease-out",
+        "effects": "translateY(-4px), shadow increases from medium to large"
+      },
+      "pulse": {
+        "description": "Subtle pulsing glow for interactive elements",
+        "animation": "Continuous pulse at 2s intervals",
+        "effects": "Glow opacity oscillates between 60% and 100%"
+      }
+    },
+    "microInteractions": {
+      "buttonPress": {
+        "description": "Button press feedback",
+        "transition": "transform 100ms ease-in",
+        "effects": "scale(0.98), inner shadow appears"
+      },
+      "glowPulse": {
+        "description": "Ambient pulsing for decorative elements",
+        "animation": "Infinite pulse, 3s duration",
+        "effects": "Opacity oscillates, glow intensity varies"
+      },
+      "flicker": {
+        "description": "Neon flicker effect for emphasis",
+        "animation": "Random flicker intervals",
+        "effects": "Brief opacity drops to simulate neon tube flicker"
+      },
+      "scanline": {
+        "description": "Cyberpunk scanline effect overlay",
+        "animation": "Vertical scanline moving from top to bottom, 4s duration, infinite",
+        "effects": "Subtle overlay with 5% opacity, creates retro screen effect"
+      },
+      "glitch": {
+        "description": "Digital glitch effect for transitions",
+        "animation": "Brief RGB split and position shift, 200ms",
+        "effects": "Text or elements briefly separate into color channels"
+      }
+    },
+    "pageTransitions": {
+      "fadeIn": {
+        "description": "Page or modal appearance",
+        "transition": "opacity 500ms ease-out",
+        "effects": "Opacity 0 to 1"
+      },
+      "slideUp": {
+        "description": "Bottom sheet or modal slide",
+        "transition": "transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 300ms ease-out",
+        "effects": "translateY(100%) to translateY(0), opacity 0 to 1"
+      },
+      "expand": {
+        "description": "Panel expansion",
+        "transition": "all 500ms ease-in-out",
+        "effects": "Scale from 0.9 to 1, opacity 0 to 1"
+      }
+    }
+  },
+  "effects": {
+    "backdropBlur": {
+      "light": {
+        "value": "blur(8px)",
+        "usage": "Subtle glass effect"
+      },
+      "medium": {
+        "value": "blur(16px)",
+        "usage": "Standard glass-morphism"
+      },
+      "heavy": {
+        "value": "blur(24px)",
+        "usage": "Strong blur for overlays"
+      }
+    },
+    "gradient": {
+      "neonCyan": {
+        "value": "linear-gradient(135deg, #24F5FF 0%, #00C2CC 100%)",
+        "usage": "Cyan gradient for backgrounds"
+      },
+      "neonCrimson": {
+        "value": "linear-gradient(135deg, #FF2A5F 0%, #CC0044 100%)",
+        "usage": "Crimson gradient for accents"
+      },
+      "dark": {
+        "value": "linear-gradient(180deg, #0B0D10 0%, #141720 100%)",
+        "usage": "Dark background gradient"
+      },
+      "overlay": {
+        "value": "linear-gradient(180deg, rgba(11, 13, 16, 0) 0%, rgba(11, 13, 16, 0.8) 100%)",
+        "usage": "Overlay gradient for images"
+      }
+    },
+    "noise": {
+      "description": "Film grain texture overlay",
+      "opacity": "0.03",
+      "usage": "Subtle texture on backgrounds for cyberpunk aesthetic"
+    }
+  },
+  "breakpoints": {
+    "xs": {
+      "value": "320px",
+      "usage": "Extra small devices"
+    },
+    "sm": {
+      "value": "640px",
+      "usage": "Small devices, mobile"
+    },
+    "md": {
+      "value": "768px",
+      "usage": "Medium devices, tablets"
+    },
+    "lg": {
+      "value": "1024px",
+      "usage": "Large devices, laptops"
+    },
+    "xl": {
+      "value": "1280px",
+      "usage": "Extra large devices, desktops"
+    },
+    "2xl": {
+      "value": "1536px",
+      "usage": "Ultra-wide displays"
+    }
+  }
+}

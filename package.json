@@ -1,0 +1,7 @@
+{
+  "name": "coreano-marcial",
+  "version": "0.0.0",
+  "scripts": {
+    "gemini": "/home/kayseth/.npm-global/bin/gemini"
+  }
+}

@@ -75,6 +75,20 @@
 - What happens when [boundary condition]?
 - How does system handle [error scenario]?
 
+## Constitution Compliance (MANDATORY)
+
+Every spec MUST include a `Constitution Compliance` section that explicitly demonstrates how the feature satisfies the project constitution (`.specify/memory/constitution.md`). The spec MUST assert or provide evidence for:
+
+- PRD mapping: exact `docs/PRD.md` section(s) that justify the feature (Domain Supremacy).
+- Acceptance criteria and derived tasks are present (Mandatory Spec-Driven Development).
+- Threat assessment: references `docs/threats_v_0.md` and lists any new threats or mitigations (Security by Default).
+- Architecture boundaries: where the logic will live and confirmation no boundary responsibilities are violated (Explicit Architecture Boundaries).
+- Performance considerations: expected impact and mitigation (Performance as Constraint).
+- Visual tokens: which `design_tokens.json` entries will change and CSS regeneration plan if UI is affected (Design Token Authority).
+- Documentation list: all docs to be updated as part of the change (Documentation Synchronization Rule).
+
+If any item is not satisfied, the spec MUST document the rationale and an explicit plan to satisfy it before merge.
+
 ## Requirements *(mandatory)*
 
 <!--

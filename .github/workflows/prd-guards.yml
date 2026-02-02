@@ -1,0 +1,34 @@
+name: PRD Guards
+
+on:
+  pull_request:
+    paths:
+      - 'docs/PRD.md'
+      - 'specs/**'
+
+jobs:
+  check-prd-meta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check PRD ratification metadata
+        run: |
+          if ! grep -E "^\*\*Version\*\*:|^\*\*Ratified\*\*:|^Version:|^Ratified:" docs/PRD.md >/dev/null; then
+            echo "ERROR: docs/PRD.md is missing Version or Ratified metadata" >&2
+            exit 1
+          fi
+      - name: Check changed specs for Constitution Compliance (basic)
+        run: |
+          # Look for changed spec files in the PR and verify they include 'Constitution Compliance'
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/* || true
+          files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^specs/' || true)
+          if [ -n "$files" ]; then
+            missing=0
+            for f in $files; do
+              if ! grep -q "Constitution Compliance" "$f"; then
+                echo "Spec $f missing 'Constitution Compliance' section" >&2
+                missing=1
+              fi
+            done
+            if [ "$missing" -eq 1 ]; then exit 1; fi
+          fi

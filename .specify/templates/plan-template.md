@@ -31,7 +31,19 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Constitution compliance is a hard gate. Every plan MUST include a short `Constitution Check` subsection that demonstrates the feature satisfies the following items from the project constitution (`.specify/memory/constitution.md`):
+
+- Domain alignment: The feature references the specific section(s) in `docs/PRD.md` that justify its existence (Domain Supremacy).
+- Spec-driven: A linked spec exists (`specs/[feature]/spec.md` or `docs/SPEC.md`) with acceptance criteria and derived tasks (Mandatory Spec-Driven Development).
+- Security: A short threat assessment was performed referencing `docs/threats_v_0.md` and any new threats are listed (Security by Default).
+- Architecture: Outline of where the feature lives in the architecture layers and a note confirming no boundary violations (Explicit Architecture Boundaries).
+- Performance: Notes on potential performance impact and mitigation (Performance as Constraint).
+- Visual changes: If UI is changed, indicate which tokens in `design_tokens.json` will be updated and whether CSS will be regenerated (Design Token Authority).
+- Documentation: List which docs will be updated (docs/PRD.md, docs/SPEC.md, docs/threats_v_0.md, docs/decisions_v_X.md) as required (Documentation Synchronization Rule).
+
+If any item cannot be satisfied, the plan MUST include a justification and an explicit mitigation or acceptance of increased review (e.g., new decision file in `docs/decisions_v_X.md`).
+
+A clear `Constitution Check` in the plan is required before Phase 0 research can proceed.
 
 ## Project Structure
 
