@@ -112,6 +112,36 @@ As a maintainer/reviewer, I want a clear approval and versioning process for cha
 
 
 ```
+
+## Zero-state and Partial-data Scenarios (Draft)
+
+Some PRD-driven features may assume the presence of content or user progress data. Documenting zero-state and partial-data behavior prevents ambiguous UX and hidden errors.
+
+- Zero-state: define how the system behaves for new users with no progress (e.g., show onboarding, default belt selection, placeholder lessons). Acceptance: onboarding flow displays default lesson and allows explicit level selection.
+- Partial-data: when media or vocabulary items are partially available, the UI must surface fallback text and gracefully skip unavailable audio assets. Acceptance: missing audio assets do not block lesson progression; clear UI affordance shown.
+
+Owner: `@EvertonKaylon` (spec author). Link to issue: https://github.com/EvertonKaylon/coreano-marcial/issues/2
+
+## Fallback Behavior for External Dependencies (Draft)
+
+When external content APIs or CDN-hosted assets are unavailable, the system must degrade gracefully:
+
+- Serve cached content when available (stale-while-revalidate policy).
+- Display non-blocking error banners with retry controls for contributors and users.
+- Provide fallbacks for media: use placeholder audio or skip playback with a message.
+
+Acceptance: Functional tests demonstrate content retrieval fallback and a visible retry affordance. Owner: `@EvertonKaylon`. Link to issue: https://github.com/EvertonKaylon/coreano-marcial/issues/3
+
+## Accessibility & Localisation Requirements (Draft)
+
+Accessibility (a11y) and localisation expectations for PRD-mandated content:
+
+- Content should conform to WCAG 2.1 AA where applicable for public-facing pages.
+- All user-facing strings must be prepared for translation (use Django i18n and `gettext_lazy`) and provide a default locale.
+- Media assets should include captions/transcripts when content is instructional.
+
+Acceptance: Linting or CI checks should include spot checks for gettext markers and presence of transcripts for audio-based lessons. Owner: `@EvertonKaylon`. Link to issue: https://github.com/EvertonKaylon/coreano-marcial/issues/4
+
 ```markdown
 # Feature Specification: Project PRD (Coreano Marcial)
 
