@@ -8,6 +8,8 @@ description: "Task list template for feature implementation"
 **Input**: Design documents from `/specs/[###-feature-name]/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
+**Constitution Gate**: All prerequisites MUST have a passing `Constitution Check` (see `specs/[feature]/plan.md` and `.specify/memory/constitution.md`) demonstrating PRD alignment, security assessment, architecture boundaries, and documentation updates.
+
 **Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
