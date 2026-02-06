@@ -4,6 +4,20 @@
 **Version:** 1.0  
 **Date:** January 27, 2026  
 **Document Type:** Critical Technical Validation & Risk Assessment
+**Ratified:** 2026-02-06
+**Ratified By:** Maintainer + Designated Reviewer
+**Change Summary:** Canonical PRD ratified with governance alignment, constitution mapping, and phased delivery guardrails.
+
+---
+
+
+## Constitution Compliance
+
+This PRD is the canonical product document and is governed by `.specify/memory/constitution.md`.
+
+- **Alignment:** Scope, phase planning, and security constraints are explicitly documented before implementation work starts.
+- **Governance:** PRD/spec updates must include `Constitution Compliance`, `Sync Impact Report`, and a named Designated Reviewer in PRs.
+- **Security/Privacy:** Any PRD/security-impacting change requires corresponding update in `docs/threats_v_0.md` and explicit security review before merge.
 
 ---
 

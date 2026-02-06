@@ -18,7 +18,11 @@ Name the Designated Reviewer(s) (pedagogy / content / security) requested for th
 
 - Designated Reviewer: @username
 
+## Review Request
+- [ ] I requested review from the Designated Reviewer in the GitHub reviewers UI
+- [ ] I requested review from 1 Maintainer
+
 ## Checklist
-- [ ] I confirm this PR includes the `Constitution Compliance` block above
-- [ ] I confirm the `Sync Impact Report` is filled
+- [ ] I confirm this PR includes the `Constitution Compliance` block above with PRD mapping + spec link
+- [ ] I confirm the `Sync Impact Report` is filled with affected files + rationale
 - [ ] For PRD changes affecting security/privacy, I confirm `docs/threats_v_0.md` was updated and a security reviewer was requested
