@@ -83,11 +83,22 @@ class AudioFile(models.Model):
     
     def clean(self):
         """
-        Validate that either lesson or vocabulary is set, but not both.
+        Validate relationship consistency with audio_type.
         """
-        if self.audio_type == 'lesson' and not self.lesson:
-            raise ValidationError('Lição deve ser especificada para áudio do tipo "Lição".')
-        if self.audio_type == 'vocabulary' and not self.vocabulary:
-            raise ValidationError('Vocabulário deve ser especificado para áudio do tipo "Vocabulário".')
         if self.lesson and self.vocabulary:
             raise ValidationError('Áudio não pode estar associado a lição E vocabulário ao mesmo tempo.')
+
+        if not self.lesson and not self.vocabulary:
+            raise ValidationError('Áudio deve estar associado a uma lição OU a um vocabulário.')
+
+        if self.audio_type == 'lesson' and not self.lesson:
+            raise ValidationError('Lição deve ser especificada para áudio do tipo "Lição".')
+
+        if self.audio_type == 'lesson' and self.vocabulary:
+            raise ValidationError('Áudio do tipo "Lição" não pode estar associado a vocabulário.')
+
+        if self.audio_type == 'vocabulary' and not self.vocabulary:
+            raise ValidationError('Vocabulário deve ser especificado para áudio do tipo "Vocabulário".')
+
+        if self.audio_type == 'vocabulary' and self.lesson:
+            raise ValidationError('Áudio do tipo "Vocabulário" não pode estar associado a lição.')

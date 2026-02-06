@@ -8,8 +8,8 @@
 <section class="current-status">
     <h3>Status Atual</h3>
     <p><strong>Faixa Atual:</strong> {{ user_progress.current_belt.name_portuguese }} ({{ user_progress.current_belt.name_korean }})</p>
-    <p><strong>Lições Completadas:</strong> {{ user_progress.total_lessons_completed }}</p>
-    <p><strong>Vocabulário Dominado:</strong> {{ user_progress.total_vocabulary_mastered }}</p>
+    <p><strong>Lições Completadas:</strong> {{ completed_lessons }}</p>
+    <p><strong>Vocabulário Dominado:</strong> {{ mastered_vocab }}</p>
     <p><strong>Acurácia Geral:</strong> {{ user_progress.overall_accuracy }}%</p>
 </section>
 
