@@ -10,13 +10,13 @@ description: "Tasks for creating and ratifying the canonical PRD"
 
 ## Phase 1: Setup & Drafting
 
-- [ ] T001 [P] [US1] Draft `docs/PRD.md` using content from `specs/001-add-prd/spec.md` (path: `docs/PRD.md`). Include ratification metadata (version, ratified_date, ratified_by, change_summary).
-- [ ] T002 [P] [US1] Add `Sync Impact Report` comment header to PR with list of affected files and rationale.
-- [ ] T003 [P] [US1] Add a `Constitution Compliance` block to the PR description referencing the spec and the required Designated Reviewer.
+- [x] T001 [P] [US1] Draft `docs/PRD.md` using content from `specs/001-add-prd/spec.md` (path: `docs/PRD.md`). Include ratification metadata (version, ratified_date, ratified_by, change_summary).
+- [x] T002 [P] [US1] Add `Sync Impact Report` comment header to PR with list of affected files and rationale.
+- [x] T003 [P] [US1] Add a `Constitution Compliance` block to the PR description referencing the spec and the required Designated Reviewer.
 
 ## Phase 2: Review & Governance
 
-- [ ] T004 [US3] Request review from a Designated Reviewer (pedagogy/content or security when applicable).
+- [x] T004 [US3] Request review from a Designated Reviewer (pedagogy/content or security when applicable).
 - [ ] T005 [US3] Obtain approvals: 1 Maintainer + 1 Designated Reviewer (or documented independent reviewer for MAJOR changes).
 - [ ] T006 [US3] After approvals, merge the PR and tag the PRD with the new version in `docs/PRD.md`.
 
@@ -39,3 +39,11 @@ description: "Tasks for creating and ratifying the canonical PRD"
 ## Notes
 All tasks require passing the Constitution Compliance before implementation.
 - The project currently has a single maintainer; see acceptance criteria in `specs/001-add-prd/spec.md` for governance details.
+
+
+## Implementation evidence (T001–T004)
+
+- T001: `docs/PRD.md` now includes ratification metadata (`Version`, `Ratified`, `Ratified By`, `Change Summary`) and a `Constitution Compliance` section.
+- T002: `.github/PULL_REQUEST_TEMPLATE.md` includes `Sync Impact Report` section with explicit required content.
+- T003: `.github/PULL_REQUEST_TEMPLATE.md` includes explicit `Constitution Compliance` section requirements and reviewer declaration.
+- T004: `.github/PULL_REQUEST_TEMPLATE.md` now includes a `Review Request` checklist requiring explicit reviewer requests in GitHub UI.

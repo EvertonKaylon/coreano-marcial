@@ -9,7 +9,7 @@
 
 ## Visão Geral
 
-Sistema de ensino de idioma coreano contextualizado para artes marciais, implementado como Progressive Web Application (PWA) server-driven usando Django + HTMX. O sistema prioriza:
+Sistema de ensino de idioma coreano contextualizado para artes marciais, com visão de produto como Progressive Web Application (PWA) server-driven usando Django + HTMX (introduzido por fases). O sistema prioriza:
 
 - **Audio-first methodology**: Pronúncia autêntica sem dependência de romanização
 - **Offline capability**: PWA com Service Worker para uso sem conexão

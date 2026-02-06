@@ -5,7 +5,7 @@ Sistema de ensino de idioma coreano contextualizado para artes marciais.
 ## Stack Técnico
 
 - Backend: Django 4.2
-- Database: PostgreSQL
+- Banco de dados: PostgreSQL
 - Frontend: HTML + CSS (sem HTMX na Fase 0)
 
 ## Requisitos
